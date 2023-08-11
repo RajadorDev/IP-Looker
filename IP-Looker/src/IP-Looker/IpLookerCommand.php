@@ -1,7 +1,5 @@
 <?php
 
-namespace IP-Looker;
-
 /*
   
   Rajador Developer
@@ -17,6 +15,7 @@ namespace IP-Looker;
 
 */
 
+namespace IP-Looker;
 
 use pocketmine\Player;
 
