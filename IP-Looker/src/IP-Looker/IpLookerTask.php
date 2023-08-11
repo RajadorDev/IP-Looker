@@ -1,5 +1,22 @@
 <?php
 
+
+/*
+  
+  Rajador Developer
+
+  ▒█▀▀█ ░█▀▀█ ░░░▒█ ░█▀▀█ ▒█▀▀▄ ▒█▀▀▀█ ▒█▀▀█ 
+  ▒█▄▄▀ ▒█▄▄█ ░▄░▒█ ▒█▄▄█ ▒█░▒█ ▒█░░▒█ ▒█▄▄▀ 
+  ▒█░▒█ ▒█░▒█ ▒█▄▄█ ▒█░▒█ ▒█▄▄▀ ▒█▄▄▄█ ▒█░▒█
+
+  GitHub: https://github.com/RajadorDev
+
+  Discord: rajadortv
+
+
+*/
+
+
 namespace IP-Looker;
 
 use pocketmine\Server;
