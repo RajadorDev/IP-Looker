@@ -23,7 +23,7 @@ class IpLookerTask extends PluginBase
 	
 	public function onRun()
 	{
-		$ch = curl_init(GetIpTask::API);
+		$ch = curl_init(IpLookerTask::API);
     curl_setopt($ch, CURLOPT_HTTPHEADER, ["User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:12.0) Gecko/20100101 Firefox/12.0 PocketMine-MP"]);
     curl_setopt($ch, CURLOPT_AUTOREFERER, true);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
