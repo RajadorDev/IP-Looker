@@ -1,6 +1,6 @@
 <?php
 
-namespace IP_Looker;
+namespace IP-Looker;
 
 use pocketmine\Server;
 
@@ -14,7 +14,7 @@ class IpLookerTask extends PluginBase
 		
 	}
 	
-	public function onComplemetion(Server $s)
+	public function onCompletion(Server $s)
 	{
 		
 	}
