@@ -9,6 +9,8 @@ use pocketmine\plugin\PluginBase;
 class IpLookerTask extends PluginBase 
 {
 	
+	const API = '';
+	
 	public function onRun()
 	{
 		
