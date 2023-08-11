@@ -6,8 +6,6 @@ use pocketmine\Player;
 
 use pocketmine\command\{CommandSender, Command};
 
-use IPLooker;
-
 class IpLookerCommand extends Command 
 {
 	
