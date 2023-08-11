@@ -1,0 +1,2 @@
+# API timeout to look server ip
+check-timeout: 20
