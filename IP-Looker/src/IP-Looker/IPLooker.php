@@ -135,6 +135,11 @@ class IPLooker extends PluginBase
 		}
 	}
 	
+	public function addWaiterForResponse(Player $p)
+	{
+		$this->waitingResponse[] = $p->getName();
+	}
+	
 	
 	
 }
