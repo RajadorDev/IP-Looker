@@ -24,10 +24,11 @@ class IpLookerCommand extends Command
 			if($this->system->haveServerIp())
 			{
 				$ip = $this->system->getServerIp();
-				$p->sendMessage(
+				$p->sendMessage
+				(
 					$prefix.PHP_EOL.
 					'§8> §eServer Address: §f' . $ip
-					);
+				);
 			}
 		}
 	}
