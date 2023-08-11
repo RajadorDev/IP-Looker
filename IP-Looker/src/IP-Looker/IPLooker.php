@@ -15,6 +15,8 @@ class IPLooker extends PluginBase
 	
 	protected static $instance = null;
 	
+	protected $commandPermission = null;
+	
 	protected $timeout = 20;
 	
 	protected $preferences = [];
@@ -33,7 +35,7 @@ class IPLooker extends PluginBase
 			
 		$this->initConfig();
 	
-		$this->getServer()->getCommandMap()->register('iplooker', new IpLookerCommand($this));
+		$this->getServer()->getCommandMap()->register('iplooker', new IpLookerCommand($this, $this->commandPermission));
 		$this->startIpLooker();
 	}
 	
@@ -47,6 +49,20 @@ class IPLooker extends PluginBase
 			$this->timeout = (int) $this->preferences['check-timout'];
 		}
 		
+		if(isset($preferences['command-permission']))
+		{
+			$this->commandPermission = $preferences['command-permission'];
+		}
+		
+	}
+	
+	public function getConfigValue(String $index, $default = false)
+	{
+		if(isset($this->preferences[$index]))
+		{
+			return $this->preferences[$index];
+		}
+		return $default;
 	}
 	
 	public static function getInstance() : IPLooker 
