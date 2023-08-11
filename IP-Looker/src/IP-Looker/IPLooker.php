@@ -16,6 +16,7 @@ class IPLooker extends PluginBase
 	public function onEnable()
 	{
 		$this->getServer()->getCommandMap()->register('iplooker', new IpLookerCommand($this));
+		$this->startIpLooker();
 	}
 	
 	/** @return String | null **/
