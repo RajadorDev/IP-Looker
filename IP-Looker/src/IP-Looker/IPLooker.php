@@ -48,6 +48,8 @@ class IPLooker extends PluginBase
 	
 	public function finishIpLooker(array $result)
 	{
+		$this->searched = true;
+		$this->isLooking = false;
 		if($result[0] == false)
 		{
 			$error = isset($result[1]) ? $result[1] : 'Unknow ERROR';
