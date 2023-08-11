@@ -2,3 +2,5 @@
 check-timeout: 20
 # Allow all players use /ip command ?
 allow-all: false
+# Command permission 
+command-permission: iplooker.adm
