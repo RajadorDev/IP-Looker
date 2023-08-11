@@ -14,6 +14,13 @@ class IpLookerCommand extends Command
 	public function __construct(IPLooker $system)
 	{
 		$this->system = $system;
+		parent::__construct
+		(
+			'ip',
+			'Show server ip address',
+			null,
+			['serverip', 'iplooker', 'address', 'adr']
+		);
 	}
 	
 	public function execute(CommandSender $p, String $label, array $args)
