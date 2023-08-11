@@ -30,6 +30,7 @@ class IpLookerCommand extends Command
 						$prefix . PHP_EOL . 
 						'§8> §eLooking for server address....'
 					);
+					$this->system->startIpLooker();
 				}else{
 					$p->sendMessage
 					(
