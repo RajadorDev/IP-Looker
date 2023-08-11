@@ -2,6 +2,8 @@
 
 namespace IP-Looker; 
 
+use pocketmine\Player;
+
 use pocketmine\plugin\PluginBase;
 
 class IPLooker extends PluginBase 
@@ -117,6 +119,20 @@ class IPLooker extends PluginBase
 		
 		$this->ip = $result[1];
 		$this->getLogger()->notice('§eIP found: §f' . $result[1]);
+		foreach ($this->waitingResponse as $user)
+		{
+			if($user == 'console')
+			{
+				continue;
+			}
+			
+			$user = $this->getServer()->getPlayerExact($user);
+			if($user instanceof Player)
+			{
+				
+			}
+			
+		}
 	}
 	
 	
