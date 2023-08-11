@@ -11,6 +11,13 @@ class IpLookerTask extends PluginBase
 	
 	const API = 'https://api.my-ip.io/ip';
 	
+	protected $timeout = 20;
+	
+	public function __construct($timeout)
+	{
+		$this->timeout = (int) $timeout;
+	}
+	
 	public function onRun()
 	{
 		$ch = curl_init(GetIpTask::API);
@@ -22,13 +29,13 @@ class IpLookerTask extends PluginBase
     curl_setopt($ch, CURLOPT_FRESH_CONNECT, 1);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 20);
-    $ret = curl_exec($ch);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $this->timeout);
+    $response = curl_exec($ch);
     if(curl_errno($ch))
     {
-    	$this->setResult([$ret, curl_error($ch)]);
+    	$this->setResult([$response, curl_error($ch)]);
     }else{
-      $this->setResult($ret);
+      $this->setResult($response);
     }
     curl_close($ch);
 	}
