@@ -15,6 +15,10 @@ class IPLooker extends PluginBase
 	
 	protected static $instance = null;
 	
+	protected $timeout = 20;
+	
+	protected $preferences = [];
+	
 	public function onEnable()
 	{
 			$this->getLogger()->info
@@ -28,7 +32,18 @@ class IPLooker extends PluginBase
 			);
 	
 		$this->getServer()->getCommandMap()->register('iplooker', new IpLookerCommand($this));
+		$this->initConfig();
 		$this->startIpLooker();
+	}
+	
+	public function initConfig()
+	{
+		$this->saveResource('config.yml');
+		$this->preferences = $this->getConfig()->getAll();
+		if(isset($preferences['check-timout']) && is_numeric($timeout = $this->preferences['check-timout']))
+		{
+			$this->timeout = (int) $this->preferences['check-timout'];
+		}
 	}
 	
 	public static function getInstance() : IPLooker 
