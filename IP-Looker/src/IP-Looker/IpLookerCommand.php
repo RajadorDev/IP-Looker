@@ -2,6 +2,8 @@
 
 namespace IP-Looker;
 
+use pocketmine\Player;
+
 use pocketmine\command\{CommandSender, Command};
 
 use IPLooker;
