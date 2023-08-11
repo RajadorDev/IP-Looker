@@ -30,9 +30,10 @@ class IPLooker extends PluginBase
 			'§8> §cYouTube: §ehttps://www.youtube.com/channel/UC1UJFxth-YRkNuLBqBYyqbA'. PHP_EOL .
 			'§8> §bGit§6Hub: §eRajadorDev'
 			);
+			
+		$this->initConfig();
 	
 		$this->getServer()->getCommandMap()->register('iplooker', new IpLookerCommand($this));
-		$this->initConfig();
 		$this->startIpLooker();
 	}
 	
