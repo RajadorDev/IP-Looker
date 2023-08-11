@@ -1,6 +1,6 @@
 <?php
 
-namespace IP-Looker; //TODO fzr depois
+namespace IP-Looker; 
 
 use pocketmine\plugin\PluginBase;
 
@@ -20,6 +20,11 @@ class IPLooker extends PluginBase
 	public function getServerIp() 
 	{
 		return $this->ip;
+	}
+	
+	public function haveServerIp() : bool
+	{
+		return is_string($this->ip);
 	}
 	
 	public function isLookingForIp() : bool 
