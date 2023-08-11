@@ -74,7 +74,7 @@ class IPLooker extends PluginBase
 	
 	public function startIpLooker()
 	{
-		$this->getServer()->getScheduler()->scheduleAsyncTask(new IpLookerTask);
+		$this->getServer()->getScheduler()->scheduleAsyncTask(new IpLookerTask($this->timeout));
 		$this->isLooking = true;
 		$this->getLogger()->notice('Looking for server address....');
 	}
