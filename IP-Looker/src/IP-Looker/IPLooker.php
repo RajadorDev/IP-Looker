@@ -129,7 +129,7 @@ class IPLooker extends PluginBase
 			$user = $this->getServer()->getPlayerExact($user);
 			if($user instanceof Player)
 			{
-				
+				$user->sendMessage('§eIp found: §f'.$this->ip);
 			}
 			
 		}
