@@ -2,6 +2,22 @@
 
 namespace IP-Looker;
 
+/*
+  
+  Rajador Developer
+
+  ▒█▀▀█ ░█▀▀█ ░░░▒█ ░█▀▀█ ▒█▀▀▄ ▒█▀▀▀█ ▒█▀▀█ 
+  ▒█▄▄▀ ▒█▄▄█ ░▄░▒█ ▒█▄▄█ ▒█░▒█ ▒█░░▒█ ▒█▄▄▀ 
+  ▒█░▒█ ▒█░▒█ ▒█▄▄█ ▒█░▒█ ▒█▄▄▀ ▒█▄▄▄█ ▒█░▒█
+
+  GitHub: https://github.com/RajadorDev
+
+  Discord: rajadortv
+
+
+*/
+
+
 use pocketmine\Player;
 
 use pocketmine\command\{CommandSender, Command};
