@@ -9,7 +9,7 @@ use pocketmine\plugin\PluginBase;
 class IpLookerTask extends PluginBase 
 {
 	
-	const API = '';
+	const API = 'https://api.my-ip.io/ip';
 	
 	public function onRun()
 	{
