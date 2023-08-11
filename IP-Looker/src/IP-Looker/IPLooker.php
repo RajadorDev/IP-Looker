@@ -58,7 +58,7 @@ class IPLooker extends PluginBase
 	{
 		$this->searched = true;
 		$this->isLooking = false;
-		if($result[0] == false)
+		if(!$result[0])
 		{
 			$error = isset($result[1]) ? $result[1] : 'Unknow ERROR';
 			return $this->getLogger()->critical($error);
