@@ -13,10 +13,17 @@ class IPLooker extends PluginBase
 	
 	protected $searched = false;
 	
+	protected static $instance = null;
+	
 	public function onEnable()
 	{
 		$this->getServer()->getCommandMap()->register('iplooker', new IpLookerCommand($this));
 		$this->startIpLooker();
+	}
+	
+	public static function getInstance() : IpLooker 
+	{
+		return self::$instance;
 	}
 	
 	/** @return String | null **/
