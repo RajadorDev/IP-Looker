@@ -11,7 +11,7 @@ class IpLookerCommand extends Command
 	
 	protected $system = null;
 	
-	public function __construct(IPLooker $system, $permission = null)
+	public function __construct(IPLooker $system, $permission = 'iplooker.adm', bool $allowAll = false)
 	{
 		$this->system = $system;
 		parent::__construct
@@ -21,7 +21,7 @@ class IpLookerCommand extends Command
 			null,
 			['serverip', 'iplooker', 'address', 'adr']
 		);
-		if(!is_null($permission))
+		if(!is_null($permission) && !$allowAll)
 		{
 			$this->setPermission($permission);
 		}
