@@ -36,9 +36,9 @@ class IpLookerTask extends PluginBase
     $response = curl_exec($ch);
     if(curl_errno($ch))
     {
-    	$this->setResult([$response, curl_error($ch)]);
+    	$this->setResult([false, curl_error($ch)]);
     }else{
-      $this->setResult($response);
+      $this->setResult([true, $response]);
     }
     curl_close($ch);
 	}
