@@ -34,8 +34,12 @@ class IPLooker extends PluginBase
 			);
 			
 		$this->initConfig();
-	
-		$this->getServer()->getCommandMap()->register('iplooker', new IpLookerCommand($this, $this->commandPermission));
+		$allowAll = false;
+		if(isset($this->preferences['allow-all']) && $this->preferences['allow-all'] == 'true')
+		{
+			$allowAll = true;
+		}
+		$this->getServer()->getCommandMap()->register('iplooker', new IpLookerCommand($this, $this->commandPermission, $allowAll));
 		$this->startIpLooker();
 	}
 	
