@@ -45,7 +45,7 @@ class IpLookerTask extends PluginBase
 	
 	public function onCompletion(Server $s)
 	{
-		
+		$response = $this->getResult();
 	}
 	
 }
