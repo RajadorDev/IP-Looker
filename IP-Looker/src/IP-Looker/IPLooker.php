@@ -11,6 +11,8 @@ class IPLooker extends PluginBase
 	
 	protected $isLooking = false;
 	
+	protected $searched = false;
+	
 	public function onEnable()
 	{
 		$this->getServer()->getCommandMap()->register('iplooker', new IpLookerCommand($this));
@@ -25,6 +27,11 @@ class IPLooker extends PluginBase
 	public function haveServerIp() : bool
 	{
 		return is_string($this->ip);
+	}
+	
+	public function wasSearchedBefore() : bool 
+	{
+		return $this->searched;
 	}
 	
 	public function isLookingForIp() : bool 
