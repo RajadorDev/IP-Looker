@@ -44,6 +44,7 @@ class IPLooker extends PluginBase
 		$this->saveResource('config.yml');
 		$this->preferences = $this->getConfig()->getAll();
 		$preferences = $this->preferences;
+		
 		if(isset($preferences['check-timout']) && is_numeric($timeout = $preferences['check-timout']))
 		{
 			$this->timeout = (int) $this->preferences['check-timout'];
