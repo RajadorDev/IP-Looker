@@ -21,7 +21,7 @@ class IPLooker extends PluginBase
 		$this->startIpLooker();
 	}
 	
-	public static function getInstance() : IpLooker 
+	public static function getInstance() : IPLooker 
 	{
 		return self::$instance;
 	}
