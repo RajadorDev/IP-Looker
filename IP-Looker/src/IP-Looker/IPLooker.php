@@ -21,6 +21,8 @@ class IPLooker extends PluginBase
 	
 	protected $preferences = [];
 	
+	protected $waitingResponse = [];
+	
 	public function onEnable()
 	{
 			$this->getLogger()->info
