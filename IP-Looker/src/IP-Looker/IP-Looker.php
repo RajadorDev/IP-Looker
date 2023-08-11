@@ -1,6 +1,6 @@
 <?php
 
-namespace IPLooker; //TODO fzr depois
+namespace IP-Looker; //TODO fzr depois
 
 use pocketmine\plugin\PluginBase;
 
