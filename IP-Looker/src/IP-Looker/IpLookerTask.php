@@ -13,9 +13,12 @@ class IpLookerTask extends PluginBase
 	
 	protected $timeout = 20;
 	
-	public function __construct($timeout)
+	public function __construct($timeout = null)
 	{
-		$this->timeout = (int) $timeout;
+		if($timeout !== null)
+		{
+			$this->timeout = (int) $timeout;
+		}
 	}
 	
 	public function onRun()
