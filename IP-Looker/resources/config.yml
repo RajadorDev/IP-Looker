@@ -1,2 +1,4 @@
 # API timeout to look server ip
 check-timeout: 20
+# Allow all players use /ip command ?
+allow-all: false
