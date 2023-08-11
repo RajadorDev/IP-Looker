@@ -29,6 +29,22 @@ class IpLookerCommand extends Command
 					$prefix.PHP_EOL.
 					'§8> §eServer Address: §f' . $ip
 				);
+			}elseif($this->system->isLookingForIp())
+			{
+				$p->sendMessage
+				(
+					$prefix . PHP_EOL .
+					'§8> §ePlease wait, the address is still being sought'
+				);
+			}elseif($this->system->wasSearchedBefore())
+			{
+				$p->sendMessage
+				(
+					$prefix . PHP_EOL .
+					'§8> §cIP not found, maybe the server is offline' . PHP_EOL .
+					'§8> §cTo retry use: §f/' . $label . ' retry'
+				);
+				
 			}
 		}
 	}
