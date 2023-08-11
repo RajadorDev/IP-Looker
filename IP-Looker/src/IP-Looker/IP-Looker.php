@@ -13,7 +13,13 @@ class IPLooker extends PluginBase
 	
 	public function onEnable()
 	{
-		
+		$this->getServer()->getCommandMap()->register('iplooker', new IpLookerCommand($this));
+	}
+	
+	/** @return String | null **/
+	public function getServerIp() 
+	{
+		return $this->ip;
 	}
 	
 	public function isLookingForIp() : bool 
@@ -23,7 +29,9 @@ class IPLooker extends PluginBase
 	
 	public function startIpLooker()
 	{
-		
+		$this->getServer()->getScheduler()->scheduleAsyncTask(new IpLookerTask);
+		$this->isLooking = true;
+		$this->getLogger()->notice('Looking for server address....');
 	}
 	
 	public function finishIpLooker(array $result)
