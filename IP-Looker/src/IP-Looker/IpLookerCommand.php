@@ -20,6 +20,27 @@ class IpLookerCommand extends Command
 	{
 		if($this->testPermission($p))
 		{
+			
+			if(isset($args[0]) && $args[0] == 'retry')
+			{
+				if (!$this->system->isLookingForIp())
+				{
+					$p->sendMessage
+					(
+						$prefix . PHP_EOL . 
+						'§8> §eLooking for server address....'
+					);
+				}else{
+					$p->sendMessage
+					(
+						$prefix . PHP_EOL .
+						'§8> §ePlease wait, the address is still being sought'
+					);
+				}
+				return true;
+			}
+			
+			
 			$prefix = '§8-==(§eIPLooker§8)==-';
 			if($this->system->haveServerIp())
 			{
