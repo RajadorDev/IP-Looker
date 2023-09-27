@@ -16,7 +16,7 @@
 */
 
 
-namespace IP-Looker; 
+namespace IP_Looker; 
 
 use pocketmine\Player;
 
@@ -45,6 +45,7 @@ class IPLooker extends PluginBase
 	{
 			$this->getLogger()->info
 			(
+			PHP_EOL.
 			'        §eIP-Looker        ' . PHP_EOL . 
 			'§8> §fCreated by: §eRajador Developer' . PHP_EOL . 
 			'§8> §9Discord: §erajadortv' . PHP_EOL .
@@ -60,11 +61,13 @@ class IPLooker extends PluginBase
 			$allowAll = true;
 		}
 		$this->getServer()->getCommandMap()->register('iplooker', new IpLookerCommand($this, $this->commandPermission, $allowAll));
+		self::$instance = $this;
 		$this->startIpLooker();
 	}
 	
 	public function initConfig()
 	{
+		@mkdir($this->getDataFolder());
 		$this->saveResource('config.yml');
 		$this->preferences = $this->getConfig()->getAll();
 		$preferences = $this->preferences;
