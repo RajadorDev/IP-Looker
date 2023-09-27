@@ -16,13 +16,13 @@
 */
 
 
-namespace IP-Looker;
+namespace IP_Looker;
 
 use pocketmine\Server;
 
-use pocketmine\plugin\PluginBase;
+use pocketmine\scheduler\AsyncTask;
 
-class IpLookerTask extends PluginBase 
+class IpLookerTask extends AsyncTask
 {
 	
 	const API = 'https://api.my-ip.io/ip';
