@@ -15,7 +15,7 @@
 
 */
 
-namespace IP-Looker;
+namespace IP_Looker;
 
 use pocketmine\Player;
 
@@ -42,8 +42,11 @@ class IpLookerCommand extends Command
 		}
 	}
 	
-	public function execute(CommandSender $p, String $label, array $args)
+	public function execute(CommandSender $p, string $label, array $args)
 	{
+		
+		$prefix = '§8-==(§eIPLooker§8)==-';
+		
 		if($this->testPermission($p))
 		{
 			
@@ -68,7 +71,7 @@ class IpLookerCommand extends Command
 			}
 			
 			
-			$prefix = '§8-==(§eIPLooker§8)==-';
+			
 			if($this->system->haveServerIp())
 			{
 				$ip = $this->system->getServerIp();
